@@ -12,9 +12,10 @@ agents/*.md
 agents/*-sidecar/sessions/*
 !agents/*-sidecar/sessions/.gitkeep
 
-# Workflow compiled files
-workflows/*/*.md
-!workflows/*/instructions.md
+# Workflows are ALL source files - track everything!
+# - workflow.yaml: Workflow definition (handwritten)
+# - instructions.md: Workflow instructions (handwritten)
+# No compiled files exist in workflows
 
 # Data directory (project-specific data, not part of module)
 data/
