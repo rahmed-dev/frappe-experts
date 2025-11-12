@@ -1,5 +1,5 @@
 # Compiled Agent Files (XML .md format)
-# ONLY the main agent .md file is compiled from YAML
+# ALL .md files in agents/ are compiled from YAML source files
 agents/*.md
 
 # Sidecar contents are ALL handwritten source files - track everything!
