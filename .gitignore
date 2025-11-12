@@ -8,6 +8,10 @@ agents/*.md
 # - knowledge/: Reference materials (handwritten)
 # All sidecars are portable and must be version controlled
 
+# Sessions are runtime data - exclude but keep directory structure
+agents/*-sidecar/sessions/*
+!agents/*-sidecar/sessions/.gitkeep
+
 # Workflow compiled files
 workflows/*/*.md
 !workflows/*/instructions.md
