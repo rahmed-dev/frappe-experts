@@ -1,396 +1,610 @@
-# Frappe Expertise Suite
+# Frappe-Experts Module
 
-Complete Frappe Framework and ERPNext solution development toolkit featuring expert agents for strategic development, business analysis, and solution architecture. Includes comprehensive workflows for system design, debugging, story-driven development, and code validation.
+**Complete Frappe Framework and ERPNext development ecosystem with 7 focused expert agents**
 
-## Overview
+Build Frappe/ERPNext solutions faster with specialized agents handling requirements analysis, solution design, implementation planning, development execution, testing, documentation, and debugging.
 
-This module provides a complete development ecosystem for Frappe Framework and ERPNext projects:
-
-**Expert Agents:**
-- **Nexus 🎯** - Strategic Frappe Developer & Framework Architect
-- **Oracle 🔮** - ERPNext Business Analyst & Solution Architect
-
-**Advanced Workflows:**
-- **design-system** - Systematic solution architecture
-- **debug** - Frappe debugging workflow
-- **develop-story** - Story-driven development
-- **validate-code** - Code quality validation
-
-## Installation
-
-```bash
-bmad install frappe-experts
-```
-
-**No configuration needed!** The module is completely self-contained with embedded frappe-guides knowledge base.
-
-## Components
-
-### Agents (2 Expert-Type Agents)
-
-#### 1. Nexus 🎯 - Strategic Frappe Developer
-
-**Role:** Senior Frappe Framework Architect & Full-Stack Developer
-
-**Capabilities:**
-- System architecture and design
-- Full-stack Frappe development (Python, JavaScript/VueJS, MariaDB)
-- API design and scaffolding
-- Story-driven development execution
-- Systematic debugging
-- Code validation against best practices
-- Framework-native solutions
-- **EMBEDDED frappe-guides knowledge base** - Complete Frappe patterns and best practices built-in!
-
-**Command Examples:**
-- `*design-system` - Architect Frappe solution from requirements
-- `*develop-story` - Execute story tasks with tests
-- `*debug` - Systematic debugging workflow
-- `*validate-code` - Check against anti-patterns
-- `*create-api` - Scaffold whitelisted API method
-- `*teach` - Deep-dive Frappe concepts explanation
-
-**Philosophy:** Server-side first, framework-native solutions, strategic thinking before coding
-
-#### 2. Oracle 🔮 - ERPNext Business Analyst
-
-**Role:** ERPNext Business Analyst & Solution Architect
-
-**Capabilities:**
-- Requirements analysis (ERPNext feature mapping)
-- Solution design (configure-first approach with 4-tier framework)
-- Gap analysis (Standard vs Custom)
-- Technical feasibility validation
-- User story generation
-- ROI analysis and prioritization
-- Migration strategy planning
-- **EMBEDDED ERPNext + Frappe knowledge base** - Complete functional/business documentation built-in!
-  - Manufacturing, HR, Stock, Quality modules
-  - Configure-First Approach (4-tier framework)
-  - Business process patterns (MTO, MTS, and more)
-  - Industry-specific solutions
-
-**Command Examples:**
-- `*review-requirements` - Analyze what ERPNext has vs needs building
-- `*gap-analysis` - Compare requirements vs ERPNext capabilities
-- `*design-solution` - Create configuration + customization approach
-- `*feasibility-check` - Validate technical feasibility
-- `*create-user-stories` - Generate implementable stories
-- `*module-check` - Identify which ERPNext module handles a process
-
-**Philosophy:** Check ERPNext first, configure before customize, upgrade-safe solutions, configurable not hard-coded
-
-### Workflows (4)
-
-#### 1. design-system
-**Type:** Interactive
-**Purpose:** Architect Frappe solutions systematically
-
-**Stages:**
-1. Requirements Analysis
-2. Data Model Design
-3. API Architecture
-4. Integration Points
-5. Implementation Strategy
-
-**Usage:**
-```
-Load Nexus agent, then: *design-system
-```
-
-#### 2. debug
-**Type:** Interactive
-**Purpose:** Systematic Frappe debugging
-
-**Process:**
-1. Gather Information
-2. Check Logs (error.log, web.log)
-3. Common Frappe Issues
-4. Debugging Tools (console, execute, mariadb)
-5. Systematic Approach
-
-**Usage:**
-```
-Load Nexus agent, then: *debug
-```
-
-#### 3. develop-story
-**Type:** Action
-**Purpose:** Story-driven development execution
-
-**Features:**
-- Task-by-task implementation
-- Frappe best practices enforcement
-- Test-driven approach
-- Story file updates (authorized sections)
-- Blocking condition handling
-- Ready for Review criteria
-
-**Usage:**
-```
-Load Nexus agent, then: *develop-story
-Provide story file path
-```
-
-#### 4. validate-code
-**Type:** Action
-**Purpose:** Code quality validation
-
-**Checks:**
-- Anti-patterns detection (custom UI, client-side logic, missing decorators)
-- Best practices verification (server-side first, permissions, error handling)
-- Line-by-line feedback
-
-**Usage:**
-```
-Load Nexus agent, then: *validate-code
-Provide code file path
-```
+---
 
 ## Quick Start
 
-### 1. Load Nexus (Strategic Developer)
+### Installation
 
-```
-/bmad:frappe-experts:agents:nexus
-```
+```bash
+# Clone the module
+cd /path/to/frappe-bench
+git clone https://github.com/rahmed-dev/frappe-experts.git .bmad/custom/modules/frappe-experts
 
-**View commands:**
-```
-*help
-```
-
-**Common workflows:**
-```
-*design-system    # Architecture & design
-*develop-story    # Implement story tasks
-*debug            # Debug issues
-*validate-code    # Code review
-*create-api       # Scaffold API method
+# Install to BMAD
+bmad install frappe-experts
 ```
 
-### 2. Load Oracle (Business Analyst)
+**Zero configuration needed!** All agents have embedded knowledge bases and work out-of-the-box.
 
-```
-/bmad:frappe-experts:agents:oracle
+### Load Your First Agent
+
+```bash
+# Load ERPNext Business Analyst for requirements analysis
+/bmad:frappe-experts:agents:erpnext-ba
+
+# Load Frappe Developer for building features
+/bmad:frappe-experts:agents:frappe-nexus
+
+# Load Solution Architect for technical design
+/bmad:frappe-experts:agents:frappe-sa
 ```
 
-**View commands:**
-```
-*help
+Each agent has a `*help` command showing all available capabilities.
+
+---
+
+## The 7 Focused Agents
+
+### Tier 1: Foundation (Strategic Planning)
+
+#### 1. ERPNext BA (Business Analyst)
+**Icon:** 📊 | **File:** `erpnext-ba.agent.yaml` | **Lines:** 71
+
+Business requirements analyst specializing in ERPNext feature mapping and gap analysis.
+
+**Use When:**
+- Analyzing business requirements
+- Checking what ERPNext already has
+- Identifying Standard vs Custom needs
+- Creating Business Requirements Document (BRD)
+
+**Key Commands:**
+- `*review-requirements` - Analyze requirements against ERPNext
+- `*gap-analysis` - Standard vs Custom feature breakdown
+- `*create-brd` - Generate Business Requirements Document
+
+**Knowledge Base:** 7 files
+- ERPNext module capabilities (Manufacturing, HR, Stock, Quality)
+- Business process patterns
+- Industry-specific solutions
+
+---
+
+#### 2. Frappe SA (Solution Architect)
+**Icon:** 🏗️ | **File:** `frappe-sa.agent.yaml` | **Lines:** 93
+
+Technical solution architect with 4-tier framework (Standard → Configure → Scripts → Custom).
+
+**Use When:**
+- Designing technical solutions
+- Creating Technical Specification Document (TSD)
+- Choosing the right customization tier
+- UX/UI design with Frappe components
+
+**Key Commands:**
+- `*create-tsd` - Generate Technical Specification
+- `*design-solution` - Architect the solution approach
+- `*feasibility-check` - Validate technical feasibility
+
+**Knowledge Base:** 2 files
+- Configure-first approach (CRITICAL philosophy)
+- 4-tier solution framework
+
+---
+
+#### 3. Phase Master (Implementation Planner)
+**Icon:** 📋 | **File:** `phase-master.agent.yaml` | **Lines:** 81
+
+Implementation sequencing specialist handling dependency management and phased delivery.
+
+**Use When:**
+- Planning implementation phases
+- Sequencing features by dependencies
+- Breaking down complex projects
+- Solving "what to build first" problems
+
+**Key Commands:**
+- `*create-implementation-plan` - Generate phased delivery plan
+- `*sequence-features` - Order features by dependencies
+- `*validate-plan` - Check for missing dependencies
+
+**Knowledge Base:** Workflow-driven (no static knowledge needed)
+
+---
+
+#### 4. Nexus (Frappe Developer - Execution Specialist)
+**Icon:** 🎯 | **File:** `frappe-nexus.agent.yaml` | **Lines:** 139 | **Version:** 2.0.0 (REFOCUSED)
+
+Senior Frappe full-stack developer who EXECUTES specifications with precision.
+
+**Use When:**
+- Building features from Technical Specification
+- Executing Implementation Plans phase-by-phase
+- Scaffolding apps, DocTypes, APIs
+- Testing and validating code
+- Debugging Frappe issues
+
+**Key Commands:**
+- `*build` - Execute Phased Implementation Plan
+- `*implement` - Build feature from Technical Specification
+- `*scaffold-app` / `*scaffold-doctype` / `*scaffold-api` - Create structures
+- `*test` - Run tests and validate
+- `*debug` - Systematic debugging workflow
+- `*migrate` / `*build-assets` - Frappe operations
+
+**Knowledge Base:** 12 files
+- Complete Frappe development guides
+- Client scripting patterns
+- Server scripting best practices
+- Reports and custom pages
+
+**What Changed in v2.0:** See [NEXUS-CHANGELOG.md](./agents/NEXUS-CHANGELOG.md)
+- 258 → 139 lines (46% reduction)
+- Removed all design commands (moved to Frappe SA)
+- Removed requirements analysis (moved to ERPNext BA)
+- Focused purely on execution
+
+---
+
+### Tier 2: Pain Relievers (Productivity Boosters)
+
+#### 5. Quick Guide (Documentation Generator)
+**Icon:** 📝 | **File:** `quick-guide.agent.yaml` | **Lines:** 81
+
+Anti-fluff documentation generator for action-oriented user guides.
+
+**Use When:**
+- Creating end-user documentation
+- Need quick, actionable guides (not 50-page manuals)
+- Onboarding users to new features
+
+**Key Commands:**
+- `*create-user-guide` - Generate focused user documentation
+- `*document-feature` - Document specific feature
+
+---
+
+#### 6. Test Gen (QA Scenario Generator)
+**Icon:** 🧪 | **File:** `test-gen.agent.yaml` | **Lines:** 82
+
+Comprehensive test scenario generator (happy path + edge cases + security).
+
+**Use When:**
+- Generating test scenarios
+- Need comprehensive test coverage
+- Not good at thinking of edge cases
+
+**Key Commands:**
+- `*generate-test-scenarios` - Create complete test matrix
+- `*security-tests` - Generate security test cases
+
+---
+
+#### 7. Debug Master (Diagnostics Expert)
+**Icon:** 🔧 | **File:** `debug-master.agent.yaml` | **Lines:** 82
+
+Root cause diagnostics specialist for production issues.
+
+**Use When:**
+- 3 AM production errors
+- Systematic debugging needed
+- Need plain language error explanations
+
+**Key Commands:**
+- `*diagnose-error` - Root cause analysis workflow
+- `*explain-error` - Plain language error explanation
+
+---
+
+## The 7 Workflows
+
+Each workflow is a step-by-step guided process:
+
+1. **create-brd** - Convert meeting notes to Business Requirements Document
+2. **review-requirements** - Analyze requirements (Standard vs Custom)
+3. **create-tsd** - Generate Technical Specification Document
+4. **create-implementation-plan** - Sequence features into phases
+5. **create-user-guide** - Generate end-user documentation
+6. **generate-test-scenarios** - Create comprehensive test matrix
+7. **diagnose-error** - Systematic root cause diagnosis
+
+Workflows are loaded automatically when you use agent commands (e.g., `*create-brd` loads the workflow).
+
+---
+
+## Typical Workflow
+
+### Scenario: Build a new ERPNext customization
+
+**Phase 1: Requirements (ERPNext BA)**
+```bash
+/bmad:frappe-experts:agents:erpnext-ba
+*review-requirements
+# Provide: Meeting notes or requirements doc
+# Output: BRD with Standard vs Custom breakdown
 ```
 
-**Common workflows:**
+**Phase 2: Solution Design (Frappe SA)**
+```bash
+/bmad:frappe-experts:agents:frappe-sa
+*create-tsd
+# Provide: BRD from previous step
+# Output: Technical Specification with 4-tier approach
 ```
-*review-requirements  # Analyze requirements
-*gap-analysis        # ERPNext capability check
-*design-solution     # Solution architecture
-*create-user-stories # Generate stories
-*feasibility-check   # Technical validation
+
+**Phase 3: Implementation Planning (Phase Master)**
+```bash
+/bmad:frappe-experts:agents:phase-master
+*create-implementation-plan
+# Provide: TSD from previous step
+# Output: Phased delivery plan with dependencies
 ```
+
+**Phase 4: Development (Nexus)**
+```bash
+/bmad:frappe-experts:agents:frappe-nexus
+*build
+# Provide: Implementation Plan from previous step
+# Output: Working, tested, production-ready code
+```
+
+**Phase 5: Documentation (Quick Guide)**
+```bash
+/bmad:frappe-experts:agents:quick-guide
+*create-user-guide
+# Provide: Implemented feature
+# Output: Action-oriented user guide
+```
+
+**Phase 6: Testing (Test Gen)**
+```bash
+/bmad:frappe-experts:agents:test-gen
+*generate-test-scenarios
+# Provide: Feature details
+# Output: Comprehensive test matrix
+```
+
+**Phase 7: Debugging (Debug Master)** *(if needed)*
+```bash
+/bmad:frappe-experts:agents:debug-master
+*diagnose-error
+# Provide: Error logs or issue description
+# Output: Root cause + plain language explanation
+```
+
+---
+
+## Knowledge Base Distribution
+
+**Total:** 21 knowledge files distributed across agents
+
+### ERPNext BA (7 files)
+```
+agents/erpnext-ba-sidecar/knowledge/
+├── README.md
+├── erpnext-ba-guide.md (11KB - ERPNext module capabilities)
+├── business-processes/
+│   └── common-patterns.md
+└── erpnext-modules/
+    ├── manufacturing.md
+    ├── hr-payroll.md
+    ├── stock-inventory.md
+    └── quality-module.md
+```
+
+### Frappe SA (2 files)
+```
+agents/frappe-sa-sidecar/knowledge/
+├── README.md
+└── frappe-framework/
+    └── configure-first-approach.md (CRITICAL philosophy)
+```
+
+### Nexus (12 files)
+```
+agents/frappe-nexus-sidecar/knowledge/
+├── README.md
+├── Frappe-dev-critical.md
+├── frappe-guides-README.md
+├── UPDATES-2025-11-09.md
+├── client-scripting/ (2 files)
+├── server-scripting/ (2 files)
+├── reports/ (2 files)
+└── custom-pages/ (2 files)
+```
+
+**Zero external dependencies!** All knowledge embedded in agent sidecars.
+
+---
 
 ## Module Structure
 
 ```
 frappe-experts/
+├── README.md                              # This file
+├── REFOCUS-SUMMARY.md                     # Refocus documentation
+├── DEPLOYMENT.md                          # Deployment guide
+├── PORTABILITY.md                         # Portability guide
+├── MIGRATION-QUICK-START.md               # Migration instructions
+├── WHAT-GETS-TRACKED.md                   # Git tracking reference
+├── config.yaml                            # Module configuration
 ├── agents/
-│   ├── frappe-nexus.md                    # Nexus agent definition
+│   ├── erpnext-ba.agent.yaml              # ERPNext Business Analyst
+│   ├── erpnext-ba-sidecar/                # (instructions, memories, knowledge)
+│   ├── frappe-sa.agent.yaml               # Solution Architect
+│   ├── frappe-sa-sidecar/
+│   ├── phase-master.agent.yaml            # Implementation Planner
+│   ├── phase-master-sidecar/
+│   ├── frappe-nexus.agent.yaml            # Frappe Developer (v2.0 - REFOCUSED)
 │   ├── frappe-nexus-sidecar/
-│   │   ├── instructions.md                # Private directives
-│   │   ├── memories.md                    # Memory bank
-│   │   └── knowledge/                     # EMBEDDED frappe-guides knowledge base
-│   │       ├── Frappe-dev-critical.md     # Core patterns & anti-patterns
-│   │       ├── client-scripting/          # Client-side best practices
-│   │       ├── server-scripting/          # Server-side best practices
-│   │       ├── custom-pages/              # Custom page guidelines
-│   │       ├── reports/                   # Report patterns
-│   │       ├── frappe-guides-README.md    # Knowledge base overview
-│   │       └── UPDATES-2025-11-09.md      # Latest updates
-│   ├── erpnext-oracle.md                  # Oracle agent definition
-│   └── erpnext-oracle-sidecar/
-│       ├── instructions.md                # Private directives
-│       ├── memories.md                    # Memory bank
-│       └── knowledge/                     # Knowledge base
+│   ├── quick-guide.agent.yaml             # Documentation Generator
+│   ├── quick-guide-sidecar/
+│   ├── test-gen.agent.yaml                # QA Scenario Generator
+│   ├── test-gen-sidecar/
+│   ├── debug-master.agent.yaml            # Diagnostics Expert
+│   ├── debug-master-sidecar/
+│   ├── NEXUS-CHANGELOG.md                 # Nexus v1.0 → v2.0 changes
+│   └── _archive/                          # Archived agents
+│       ├── README.md                      # Archive documentation
+│       └── erpnext-oracle.agent.yaml      # Deprecated Oracle agent
 ├── workflows/
-│   ├── design-system/
-│   │   └── workflow.yaml
-│   ├── debug/
-│   │   └── workflow.yaml
-│   ├── develop-story/
-│   │   └── workflow.yaml
-│   └── validate-code/
-│       └── workflow.yaml
-├── data/                                  # Module data storage
-├── _module-installer/
-│   └── install-config.yaml                # Installation config
-└── README.md                              # This file
+│   ├── create-brd/                        # BRD workflow
+│   ├── review-requirements/               # Requirements analysis
+│   ├── create-tsd/                        # Technical Specification
+│   ├── create-implementation-plan/        # Implementation sequencing
+│   ├── create-user-guide/                 # User documentation
+│   ├── generate-test-scenarios/           # Test scenario generation
+│   └── diagnose-error/                    # Error diagnostics
+└── data/                                  # Module data storage (gitignored)
 ```
 
-## Configuration
-
-The module can be configured in `.bmad/frappe-experts/config.yaml`
-
-**Key settings:**
-- `module_data_path` - Module data storage location
-- `workflows_enabled` - Enable/disable workflows
-
-**Inherited from core:**
-- `user_name` - Your name (used in greetings)
-- `communication_language` - Agent communication language
-- `output_folder` - Where workflows save outputs
-
-**Note:** No external knowledge base configuration needed - Both Nexus and Oracle have everything embedded!
-
-## Examples
-
-### Example 1: Design a New Frappe Feature
-
-```
-1. Load Nexus: /bmad:frappe-experts:agents:nexus
-2. Run: *design-system
-3. Provide business requirements
-4. Review architecture design
-5. Get implementation plan
-```
-
-### Example 2: Analyze ERPNext Requirements
-
-```
-1. Load Oracle: /bmad:frappe-experts:agents:oracle
-2. Run: *review-requirements
-3. Provide requirements document
-4. Get categorized analysis (Standard/Configurable/Custom)
-5. Review integration points
-```
-
-### Example 3: Implement Story Tasks
-
-```
-1. Load Nexus: /bmad:frappe-experts:agents:nexus
-2. Run: *develop-story
-3. Provide story file path
-4. Nexus implements tasks, writes tests, validates
-5. Story marked "Ready for Review"
-```
-
-### Example 4: Validate Code Quality
-
-```
-1. Load Nexus: /bmad:frappe-experts:agents:nexus
-2. Run: *validate-code
-3. Provide code file path
-4. Get anti-pattern detection and best practice feedback
-```
-
-## Knowledge Base Integration
-
-### Nexus - Embedded Frappe Development Knowledge
-
-**Nexus has the complete frappe-guides knowledge base EMBEDDED**:
-- **Frappe-dev-critical.md** - Core patterns and anti-patterns
-- **client-scripting/** - Client-side best practices and examples
-- **server-scripting/** - Server-side best practices and patterns
-- **custom-pages/** - Custom page development guidelines
-- **reports/** - Report creation patterns
-- **frappe-guides-README.md** - Overview of all patterns
-- **UPDATES-2025-11-09.md** - Latest updates and changes
-
-### Oracle - Embedded ERPNext Business Knowledge
-
-**Oracle has complete frappe-guides PLUS extensive functional/business documentation EMBEDDED**:
-
-**Frappe Technical Guides:**
-- Complete frappe-guides (same as Nexus)
-- erpnext-ba-guide.md - ERPNext modules and features
-
-**ERPNext Module Documentation:**
-- **manufacturing.md** - BOM, Work Order, Job Card, Production Planning, Subcontracting
-- **hr-payroll.md** - Employee management, Attendance, Shifts, Leave, Payroll
-- **stock-inventory.md** - Warehouse, Batch/Serial tracking, Stock transactions
-- **quality-module.md** - Quality Inspection, Goals, Procedures
-
-**Frappe Framework Functional Guides:**
-- **configure-first-approach.md** - 4-Tier Solution Framework (CRITICAL for Oracle)
-  - Tier 1: ERPNext Built-in Features
-  - Tier 2: Configuration (Custom Fields, Workflows)
-  - Tier 3: Light Customization (Scripts, Reports)
-  - Tier 4: Custom App (Last resort)
-  - ROI decision matrix
-
-**Business Process Patterns:**
-- **common-patterns.md** - Industry patterns and flows
-  - Manufacturing (MTO, MTS, Subcontracting)
-  - Procurement, Sales & Distribution
-  - Project Management, HR & Payroll
-  - Quality Management, Stock Management
-  - Configuration vs Customization decision tree
-  - Industry-specific patterns (Pharma, Electronics, etc.)
-
-**ZERO external dependencies!** Both agents have everything embedded.
-
-## Development Roadmap
-
-### Phase 1: Core Components ✅
-- [x] Nexus agent with sidecar system
-- [x] Oracle agent with sidecar system
-- [x] design-system workflow
-- [x] debug workflow
-- [x] develop-story workflow
-- [x] validate-code workflow
-
-### Phase 2: Enhanced Features
-- [ ] Add create-doctype workflow for Nexus
-- [ ] Add create-report workflow for Nexus
-- [ ] Add integration design workflows
-- [ ] Add migration planning workflows for Oracle
-- [ ] Enhanced memory systems for both agents
-
-### Phase 3: Polish and Integration
-- [ ] Shared templates library
-- [ ] Cross-agent collaboration workflows
-- [ ] Performance optimization guides
-- [ ] Extended ERPNext module coverage
-
-## Quick Commands
-
-**Create new agent:**
-```
-/bmad:bmb:workflows:create-agent
-```
-
-**Create new workflow:**
-```
-/bmad:bmb:workflows:create-workflow
-```
-
-## Contributing
-
-To extend this module:
-
-1. Add new agents using `create-agent` workflow
-2. Add new workflows using `create-workflow` workflow
-3. Update agent menus to reference new workflows
-4. Test thoroughly with Frappe/ERPNext projects
-5. Submit improvements via pull request
-
-## Technical Notes
-
-- **Agent Types:** Both agents are Expert-type with sidecar systems
-- **Workflow Types:** Mix of Interactive (design-system, debug) and Action (develop-story, validate-code) workflows
-- **Dependencies:** NONE - Both agents have comprehensive embedded knowledge
-- **Platform:** Works with any Frappe Framework or ERPNext project
-- **Knowledge Base Size:**
-  - Nexus: 12 files (complete frappe-guides)
-  - Oracle: 20+ files (frappe-guides + ERPNext modules + business patterns)
-
-## Author
-
-Created by Rizwan Ahmed on 2025-11-10
-
-**Migrated from legacy agents:** frappe-nexus and erpnext-oracle
-**BMAD Version:** 6.0.0-alpha.8
-**Module Type:** Standard Module (2 Expert Agents, 4 Workflows)
+**Total:** 130 tracked files, 629 lines of agent code (35% reduction from pre-refocus)
 
 ---
 
-**⚡ Ready to revolutionize your Frappe development workflow! ⚡**
+## Documentation
+
+### Core Documentation
+- **[README.md](./README.md)** - This file (main entry point)
+- **[REFOCUS-SUMMARY.md](./REFOCUS-SUMMARY.md)** - Complete refactoring documentation
+- **[NEXUS-CHANGELOG.md](./agents/NEXUS-CHANGELOG.md)** - Nexus v1.0 → v2.0 migration guide
+
+### Deployment & Migration
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Complete deployment strategies
+- **[PORTABILITY.md](./PORTABILITY.md)** - Portability verification
+- **[MIGRATION-QUICK-START.md](./MIGRATION-QUICK-START.md)** - Quick migration guide
+- **[WHAT-GETS-TRACKED.md](./WHAT-GETS-TRACKED.md)** - Git tracking reference
+
+### Archive
+- **[agents/_archive/README.md](./agents/_archive/README.md)** - Why Oracle was archived and migration map
+
+---
+
+## Agent Evolution
+
+### What Changed (2025-11-12 Refocus)
+
+**Before:**
+- 8 agents (bloated Nexus + obsolete Oracle)
+- 971 lines of agent code
+- Mixed responsibilities (Oracle: business + technical)
+- Mental mode switching overhead
+
+**After:**
+- 7 focused agents
+- 629 lines of agent code (35% reduction)
+- Single responsibility per agent
+- Clear boundaries (business vs technical vs sequencing vs execution)
+
+**Key Changes:**
+1. **Nexus refocused** - Strategic → Execution Specialist (258 → 139 lines)
+2. **Oracle deprecated** - Split into ERPNext BA + Frappe SA + Phase Master
+3. **Knowledge migrated** - Distributed to appropriate agents
+4. **Archive created** - Preserved Oracle for reference
+
+See [REFOCUS-SUMMARY.md](./REFOCUS-SUMMARY.md) for complete details.
+
+---
+
+## Configuration
+
+Module configuration in `config.yaml`:
+
+```yaml
+module_name: frappe-experts
+module_version: '1.0.0'
+module_data_path: '{project-root}/.bmad/custom/modules/frappe-experts/data'
+user_name: '{config}:user_name'
+communication_language: '{config}:communication_language'
+```
+
+**Dynamic tokens:**
+- `{project-root}` - Auto-resolves to frappe-bench root
+- `{config}:user_name` - Inherits from core config
+- `{config}:communication_language` - Inherits from core config
+
+**Zero configuration needed!** All paths are dynamic and portable.
+
+---
+
+## Portability
+
+**100% Portable** - Works on any machine with zero dependencies.
+
+**What's tracked in git:**
+- All 7 agent YAML source files
+- All agent sidecars (instructions, memories, knowledge)
+- All workflows (YAML + instructions.md)
+- All documentation
+- Archive (deprecated agents for reference)
+
+**What's excluded:**
+- Compiled .md files (regenerated by `bmad install`)
+- Runtime session data
+- Project-specific data folder
+
+See [PORTABILITY.md](./PORTABILITY.md) for verification details.
+
+---
+
+## Advanced Usage
+
+### Create Custom Agents
+
+Use BMAD Builder workflows to extend this module:
+
+```bash
+/bmad:bmb:workflows:create-agent
+# Follow prompts to add new agent to frappe-experts
+```
+
+### Create Custom Workflows
+
+```bash
+/bmad:bmb:workflows:create-workflow
+# Add new workflows to existing agents
+```
+
+### Update Knowledge Bases
+
+Knowledge bases are handwritten markdown files in each agent's sidecar:
+
+```bash
+# Edit ERPNext BA knowledge
+vim agents/erpnext-ba-sidecar/knowledge/erpnext-modules/manufacturing.md
+
+# Edit Frappe SA knowledge
+vim agents/frappe-sa-sidecar/knowledge/frappe-framework/configure-first-approach.md
+
+# Edit Nexus knowledge
+vim agents/frappe-nexus-sidecar/knowledge/Frappe-dev-critical.md
+```
+
+After editing, commit changes:
+
+```bash
+git add agents/*/knowledge/
+git commit -m "Update knowledge bases"
+git push
+```
+
+---
+
+## Troubleshooting
+
+### Agent not loading?
+
+```bash
+# Reinstall the module
+bmad install frappe-experts
+
+# Verify agents compiled
+ls -la .bmad/custom/modules/frappe-experts/agents/*.md
+```
+
+### Knowledge base not found?
+
+```bash
+# Check knowledge files exist
+ls -la agents/*/knowledge/
+
+# Verify paths in agent YAML
+grep -r "knowledge/" agents/*.agent.yaml
+```
+
+### Workflow not working?
+
+```bash
+# Check workflow exists
+ls -la workflows/*/workflow.yaml
+
+# Verify workflow referenced in agent menu
+grep -A 5 "workflows:" agents/*.agent.yaml
+```
+
+---
+
+## Contributing
+
+To contribute to this module:
+
+1. **Fork the repository**
+   ```bash
+   git clone https://github.com/rahmed-dev/frappe-experts.git
+   ```
+
+2. **Make changes**
+   - Edit agent YAML files (not compiled .md files)
+   - Update knowledge bases in sidecars
+   - Add workflows if needed
+
+3. **Test thoroughly**
+   ```bash
+   bmad install frappe-experts
+   # Test all agents and workflows
+   ```
+
+4. **Submit pull request**
+   - Describe changes clearly
+   - Reference any issues fixed
+   - Include examples if adding features
+
+---
+
+## Technical Details
+
+**BMAD Version:** 6.0.0-alpha.8+
+**Module Type:** Custom Expert Module
+**Agent Count:** 7 (all Expert-type with sidecars)
+**Workflow Count:** 7
+**Knowledge Files:** 21 (distributed across agents)
+**Total Lines:** 629 (agent code only)
+**Dependencies:** ZERO
+**Portability:** 100%
+
+**Tested With:**
+- Frappe Framework v15+
+- ERPNext v15+
+- BMAD v6.0.0-alpha.8+
+
+---
+
+## Changelog
+
+### v1.0.0 (2025-11-12) - Major Refocus
+- Refocused Nexus to execution-only specialist (v2.0.0)
+- Deprecated Oracle, split into ERPNext BA + Frappe SA + Phase Master
+- Migrated knowledge bases appropriately
+- Created archive for deprecated agents
+- 35% reduction in agent code (971 → 629 lines)
+- Added comprehensive documentation
+
+### v0.1.0 (2024-XX-XX) - Initial Release
+- Original Nexus (strategic developer)
+- Original Oracle (business analyst + solution architect)
+- 4 workflows (design-system, debug, develop-story, validate-code)
+
+---
+
+## License
+
+MIT License - See repository for full license text.
+
+---
+
+## Author
+
+**Created by:** Rizwan Ahmed
+**Date:** 2025-11-12
+**Repository:** https://github.com/rahmed-dev/frappe-experts
+**Contact:** [Your contact info]
+
+---
+
+## Support
+
+- **Issues:** https://github.com/rahmed-dev/frappe-experts/issues
+- **Documentation:** See this README and linked guides
+- **BMAD Help:** `/help` in Claude Code
+- **Community:** [Link to community if available]
+
+---
+
+**Ready to revolutionize your Frappe/ERPNext development workflow!**
+
+Install now: `bmad install frappe-experts`
