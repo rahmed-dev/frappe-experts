@@ -1,0 +1,45 @@
+name: debug
+description: Systematic Frappe debugging workflow - logs analysis, common issues, debugging tools
+author: Nexus
+
+# Standard BMAD v6 config block
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+date: system-generated
+
+template: false
+instructions: |
+  Systematic Frappe debugging workflow:
+
+  1. GATHER INFORMATION
+     - What's the error message or unexpected behavior?
+     - What was the expected outcome?
+     - Can you reproduce it consistently?
+
+  2. CHECK LOGS
+     - tail -f sites/[site]/logs/error.log
+     - tail -f sites/[site]/logs/web.log
+     - Look for Python tracebacks or JS console errors
+
+  3. COMMON FRAPPE ISSUES
+     - Not migrated after JSON changes → bench --site [site] migrate
+     - JS not updated → bench build --app [app] && bench --site [site] clear-cache
+     - Cache issues → bench --site [site] clear-cache && bench restart
+     - Permission errors → Check frappe.has_permission() calls
+     - Type errors → Verify int/flt conversion from JS form values
+
+  4. DEBUGGING TOOLS
+     - Python console: bench --site [site] console
+     - Execute function: bench --site [site] execute "path.to.function"
+     - Database shell: bench --site [site] mariadb
+     - Add debug prints: frappe.log_error(title="Debug", message=data)
+
+  5. SYSTEMATIC APPROACH
+     - Isolate the problem (which layer: DB, Python, JS, UI?)
+     - Check assumptions (data types, permissions, state)
+     - Test incrementally (comment out code, add logging)
+     - Verify against knowledge base patterns
+
+  Walk through debugging systematically with the user.

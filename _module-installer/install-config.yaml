@@ -1,0 +1,43 @@
+# Frappe Expertise Suite Module Configuration
+# This file defines installation questions and module configuration values
+
+code: frappe-experts
+name: "Frappe Expertise Suite"
+default_selected: false
+
+# Welcome message shown during installation
+prompt:
+  - "Thank you for choosing Frappe Expertise Suite!"
+  - ""
+  - "Complete ERPNext/Frappe development lifecycle toolkit with 7 expert agents:"
+  - ""
+  - "🏗️  TIER 1 - Foundation (Strategic Planning):"
+  - "  • ERPNext BA - Business Requirements Analyst"
+  - "  • Frappe SA - Solution Architect (4-tier framework + UX design)"
+  - "  • Phase Master - Implementation Planner (dependency sequencing)"
+  - "  • Nexus - Execution Specialist (code implementation)"
+  - ""
+  - "🚀 TIER 2 - Pain Relievers (Productivity Boosters):"
+  - "  • Quick Guide - Anti-fluff Documentation Generator"
+  - "  • Test Gen - Comprehensive QA Scenario Generator"
+  - "  • Debug Master - Root Cause Diagnostics Expert"
+  - ""
+  - "Perfect for Frappe/ERPNext developers, consultants, and implementation teams!"
+
+# Core config values are automatically inherited:
+## user_name
+## communication_language
+## document_output_language
+## output_folder
+
+# ============================================================================
+# CONFIGURATION FIELDS
+# ============================================================================
+
+# STATIC: Module data path (where generated documents are saved)
+module_data_path:
+  result: "{project-root}/.bmad/frappe-experts/data"
+
+# STATIC: Enable workflows
+workflows_enabled:
+  result: "true"

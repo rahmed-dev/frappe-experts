@@ -1,0 +1,17 @@
+# Create Implementation Plan Workflow
+name: create-implementation-plan
+description: "Convert Technical Specification into phased Implementation Plan with dependency sequencing"
+author: "frappe-experts"
+
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+module_data_path: "{config_source}:module_data_path"
+
+installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/create-implementation-plan"
+template: true
+instructions: "{installed_path}/instructions.md"
+
+default_output_file: "{module_data_path}/implementation/{{project_name}}-implementation-plan-{{date}}.md"
+
+standalone: false

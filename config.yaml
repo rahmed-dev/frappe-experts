@@ -1,0 +1,18 @@
+# Frappe Experts Module Configuration
+# This config file provides module-level settings for all frappe-experts agents
+
+# Module identification
+module_name: frappe-experts
+module_version: '1.0.0'
+module_description: 'Expert agents for Frappe Framework and ERPNext development'
+
+# Module-specific paths
+module_data_path: '{project-root}/.bmad/custom/modules/frappe-experts/data'
+
+# User settings (inherited from BMAD core during installation)
+user_name: '{config}:user_name'
+communication_language: '{config}:communication_language'
+
+# Optional: Module-level settings that agents can reference
+default_communication_style: 'professional'
+enable_verbose_logging: false

@@ -1,0 +1,15 @@
+# Review Requirements Workflow
+name: review-requirements
+description: "Analyze existing requirements and categorize against ERPNext capabilities"
+author: "frappe-experts"
+
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+module_data_path: "{config_source}:module_data_path"
+
+installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/review-requirements"
+template: false
+instructions: "{installed_path}/instructions.md"
+
+standalone: false

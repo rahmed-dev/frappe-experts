@@ -1,0 +1,71 @@
+name: develop-story
+description: Story-driven development workflow for Frappe Framework - implement tasks, write tests, validate
+author: Nexus
+
+# Standard BMAD v6 config block
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+date: system-generated
+
+template: false
+instructions: |
+  CRITICAL SETUP:
+  - Load COMPLETE file {agent-folder}/frappe-nexus-sidecar/knowledge/Frappe-dev-critical.md for core Frappe patterns and anti-patterns
+
+  Execute story-driven development following this exact workflow:
+
+  ORDER OF EXECUTION:
+  1. Read first (or next) task from story
+  2. Implement task and all subtasks following Frappe best practices
+  3. Write tests for implementation
+  4. Execute all validations
+  5. ONLY if ALL validations pass, mark task checkbox with [x]
+  6. Update story "File List" section with any new/modified/deleted source files
+  7. Repeat until all tasks complete
+
+  FRAPPE WORKFLOW (CRITICAL):
+  - For new apps: use 'bench new-app [app]' or verify existing structure
+  - For custom pages: use 'bench new-page [Page Name]'
+  - For DocType customization: register in hooks.py (doctype_js/doctype_py)
+  - After hooks.py changes: run 'bench --site [site] migrate && bench restart'
+  - After JS changes: run 'bench build --app [app] && bench --site [site] clear-cache'
+  - Test manually: 'bench --site [site] execute "path.to.function"'
+  - Server-side first: ALL queries in Python API methods, not JavaScript
+  - Use Frappe native components: frappe.ui.Dialog field types, not custom HTML
+  - Date format: Store YYYY-MM-DD (system), Display DD-MM-YYYY (user)
+  - Always convert JS form values to proper types in Python (int, flt)
+
+  STORY FILE UPDATES (AUTHORIZED SECTIONS ONLY):
+  - Tasks/Subtasks checkboxes
+  - Dev Agent Record section and subsections
+  - Agent Model Used
+  - Debug Log References
+  - Completion Notes List
+  - File List
+  - Change Log
+  - Status
+  - DO NOT modify: Story, Acceptance Criteria, Dev Notes, Testing sections
+
+  BLOCKING CONDITIONS (HALT FOR):
+  - Unapproved dependencies needed - confirm with user
+  - Ambiguous requirements after checking story
+  - 3 failures attempting same fix repeatedly
+  - Missing configuration
+  - Failing regression tests
+  - Unclear Frappe/ERPNext integration approach
+
+  READY FOR REVIEW CRITERIA:
+  - Code matches requirements
+  - All validations pass
+  - Follows Frappe standards
+  - File List complete
+  - bench migrate runs successfully
+
+  COMPLETION:
+  - All tasks/subtasks marked [x] with tests
+  - Validations and full regression pass (EXECUTE ALL TESTS)
+  - File List is complete
+  - Set story status: 'Ready for Review'
+  - HALT and await user

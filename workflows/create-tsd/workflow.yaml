@@ -1,0 +1,17 @@
+# Create TSD (Technical Specification Document) Workflow
+name: create-tsd
+description: "Create Technical Specification with UX focus from Business Requirements"
+author: "frappe-experts"
+
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+module_data_path: "{config_source}:module_data_path"
+
+installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/create-tsd"
+template: true
+instructions: "{installed_path}/instructions.md"
+
+default_output_file: "{module_data_path}/technical/{{project_name}}-technical-spec-{{date}}.md"
+
+standalone: false

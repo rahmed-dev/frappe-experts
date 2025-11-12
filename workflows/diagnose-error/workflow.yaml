@@ -1,0 +1,17 @@
+# Diagnose Error Workflow
+name: diagnose-error
+description: "Root cause analysis and diagnosis for ERPNext/Frappe errors with plain language explanations"
+author: "frappe-experts"
+
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+module_data_path: "{config_source}:module_data_path"
+
+installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/diagnose-error"
+template: true
+instructions: "{installed_path}/instructions.md"
+
+default_output_file: "{module_data_path}/diagnostics/{{error_id}}-diagnosis-{{date}}.md"
+
+standalone: false

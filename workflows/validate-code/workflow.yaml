@@ -1,0 +1,42 @@
+name: validate-code
+description: Validate code against Frappe best practices and anti-patterns
+author: Nexus
+
+# Standard BMAD v6 config block
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+date: system-generated
+
+template: false
+instructions: |
+  CRITICAL SETUP:
+  - Load COMPLETE file {agent-folder}/frappe-nexus-sidecar/knowledge/Frappe-dev-critical.md for reference
+
+  Validate code against Frappe best practices and anti-patterns:
+
+  CHECK FOR ANTI-PATTERNS:
+  ❌ Custom HTML/CSS instead of Frappe native field types
+  ❌ Client-side data filtering/processing (should be in Python)
+  ❌ Not registering JS/Python overrides in hooks.py
+  ❌ Missing @frappe.whitelist() decorator on API methods
+  ❌ Not converting string form values to int/float in Python
+  ❌ Not checking permissions with frappe.has_permission()
+  ❌ Not disabling submit button in dialogs (causes duplicates)
+  ❌ console.log() statements in production code
+  ❌ Missing ignore_permissions=True in background jobs
+  ❌ Missing frappe.db.commit() in scheduler loops
+  ❌ Incorrect date handling (must store YYYY-MM-DD)
+  ❌ Using $("#id").hide() instead of d.set_df_property()
+
+  CHECK FOR BEST PRACTICES:
+  ✅ Server-side first - all data operations in Python
+  ✅ Using Frappe standards (frappe.call, frappe.ui.Dialog, etc.)
+  ✅ Minimal code complexity - extracted helpers, single-purpose functions
+  ✅ Permission-first design - checking frappe.has_permission() before writes
+  ✅ Native Frappe components - no custom UI
+  ✅ Proper error handling with frappe.throw() and frappe.log_error()
+  ✅ Standard return format: {"success": bool, "data": any, "message": str}
+
+  Provide specific feedback with line references and corrections.

@@ -1,0 +1,20 @@
+# Create BRD (Business Requirements Document) Workflow
+name: create-brd
+description: "Convert messy meeting notes into structured Business Requirements Document"
+author: "frappe-experts"
+
+# Load config from frappe-experts module
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+module_data_path: "{config_source}:module_data_path"
+
+# Workflow paths
+installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/create-brd"
+template: true
+instructions: "{installed_path}/instructions.md"
+
+# Output configuration
+default_output_file: "{module_data_path}/requirements/{{project_name}}-requirements-{{date}}.md"
+
+standalone: false

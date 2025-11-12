@@ -1,0 +1,62 @@
+# Compiled Agent Files (XML .md format)
+# These are generated from YAML source files and should not be version controlled
+agents/*.md
+agents/*-sidecar/
+
+# Workflow compiled files
+workflows/*/*.md
+!workflows/*/instructions.md
+
+# Data directory (project-specific data, not part of module)
+data/
+
+# Environment-specific configs
+.env
+*.local.yaml
+config.local.yaml
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Node modules (if any JavaScript tooling added later)
+node_modules/
+
+# Python cache (if any Python utilities added)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Keep these YAML source files (version controlled):
+# ✅ agents/*.agent.yaml
+# ✅ workflows/*/workflow.yaml
+# ✅ workflows/*/instructions.md
+# ✅ config.yaml
+# ✅ README.md
+# ✅ _module-installer/
+
+# Keep deployment scripts
+# ✅ deploy.sh
+# ✅ DEPLOYMENT.md
