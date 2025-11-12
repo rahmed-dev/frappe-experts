@@ -1,7 +1,15 @@
 # Compiled Agent Files (XML .md format)
 # These are generated from YAML source files and should not be version controlled
 agents/*.md
-agents/*-sidecar/
+
+# Sidecar files - SELECTIVE exclusion
+# Exclude runtime/compiled files but KEEP knowledge bases
+agents/*-sidecar/memories.md
+agents/*-sidecar/instructions.md
+
+# KEEP knowledge bases (static reference materials)
+# These are NOT in YAML - they're actual files that must be version controlled
+# !agents/*-sidecar/knowledge/  (already included by default)
 
 # Workflow compiled files
 workflows/*/*.md
