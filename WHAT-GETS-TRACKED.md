@@ -34,12 +34,12 @@ agents/
 ```
 
 **Summary:**
-- ✅ 6 agent YAML source files
+- ✅ 8 agent YAML source files (ALL agents now use YAML!)
 - ✅ 8 sidecar instructions.md (handwritten directives)
 - ✅ 8 sidecar memories.md (template structures)
 - ✅ 37 knowledge base files (all reference materials)
 - ✅ 8 sessions/.gitkeep (directory structure)
-- ❌ 6+ compiled .md agent files (regenerated on install)
+- ❌ 8 compiled .md agent files (regenerated on install from YAML)
 - ❌ All session/*.md files (runtime conversation data)
 
 ---
@@ -178,8 +178,8 @@ desktop.ini                                  ❌ Windows metadata
 
 | Category | Tracked | Excluded | Total |
 |----------|---------|----------|-------|
-| **Agent YAML** | 6 | 0 | 6 |
-| **Agent .md (compiled)** | 0 | 6 | 6 |
+| **Agent YAML** | 8 | 0 | 8 |
+| **Agent .md (compiled)** | 0 | 8 | 8 |
 | **Sidecar instructions** | 8 | 0 | 8 |
 | **Sidecar memories** | 8 | 0 | 8 |
 | **Knowledge bases** | 37 | 0 | 37 |
@@ -188,7 +188,7 @@ desktop.ini                                  ❌ Windows metadata
 | **Workflow instructions** | 7 | 0 | 7 |
 | **Infrastructure** | 8 | 0 | 8 |
 | **Data output** | 0 | ∞ (generated) | - |
-| **TOTAL** | **93** | varies | - |
+| **TOTAL** | **96** | varies | - |
 
 ---
 
