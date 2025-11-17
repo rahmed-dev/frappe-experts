@@ -9,7 +9,7 @@ communication_language: "{config_source}:communication_language"
 module_data_path: "{config_source}:module_data_path"
 
 installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/create-tsd"
-template: true
+template: "{installed_path}/template.md"
 instructions: "{installed_path}/instructions.md"
 
 default_output_file: "{module_data_path}/technical/{{project_name}}-technical-spec-{{date}}.md"

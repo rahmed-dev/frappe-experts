@@ -72,9 +72,15 @@
 ### Phased Implementation Plan Format:
 
 **Must Include:**
-- Executive Summary (total phases, critical path, parallel opportunities)
+- Document structure must be token efficiency with:
+  - Table of Contents with section numbers for quick navigation
+  - Modular sections - Each feature self-contained
+  - Tables over prose - More information, fewer tokens
+  - Clear hierarchical numbering - Easy to reference specific sections
+  - Minimal redundancy - No repeated information
 - Dependency Analysis (master dependency graph)
 - Critical Path Identification (must-build-first features)
+  - Critically, divide configuration, new doctype, customizaiton, workflows etc and coding. This is critical because the new doctype, customizaitons and configuration, will be handeled by user throguh UI, any thing that can not be done via UI Customizaiton, should be added to code part.  
 - Phase breakdown for each phase:
   - Goal (what capability this phase adds)
   - Features in phase (with dependencies, user value, technical scope)
@@ -93,6 +99,7 @@
 - Phase 1 actually delivers useful system
 - Parallel work is accurately identified
 - Contingency options provided for risks
+- Always review the Documentation for being non-fluffy, and wordy. it should always be to-the-point and practicale and reliable. 
 
 ## Handoff Protocol
 

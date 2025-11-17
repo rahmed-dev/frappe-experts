@@ -2,6 +2,8 @@
 
 <critical>Execute this workflow to convert messy meeting notes into structured Business Requirements Document</critical>
 <critical>Communicate in {communication_language} throughout</critical>
+<critical>Follow template standards from: {project-root}/.bmad/custom/modules/frappe-experts/standards/template-standards.md</critical>
+<critical>Output MUST be token-efficient: tables over prose, numbered sections, no fluff</critical>
 
 <workflow>
 
@@ -20,6 +22,9 @@ d) Multiple sources (combination of above)
 
   <ask>What's the project name?</ask>
   <action>Store as {{project_name}}</action>
+
+  <ask>What's the client name?</ask>
+  <action>Store as {{client_name}}</action>
 
   <ask>What industry is the client in? (e.g., Manufacturing, Distribution, Services)</ask>
   <action>Store as {{industry}}</action>
@@ -43,83 +48,99 @@ d) Multiple sources (combination of above)
 </step>
 
 <step n="3" goal="Generate Business Requirements Document">
-  <template-output>business_requirements_document</template-output>
 
-  <action>Generate complete BRD with following sections:
-
-# Business Requirements Document
-
-**Project:** {{project_name}}
-**Client:** [Client Name]
-**Date:** {{date}}
-**Prepared by:** ERPNext Business Analyst
-
-## Executive Summary
-
-[2-3 sentences: What the client needs and why]
-
-## Business Context
-
-- **Industry:** {{industry}}
-- **Current System:** {{current_system}}
-- **Key Pain Points:**
-  - [Bullet list of main problems]
-- **Business Goals:**
-  - [What success looks like]
-
-## Requirements Analysis
-
-[For each requirement category:]
-
-### [Category Name - e.g., Sales Order Processing]
-
-**Requirement:** [Clear statement of need]
-
-**Business Value:** [Why this matters to the business]
-
-**ERPNext Status:**
-- ✅ Standard Feature (Module: [Module Name], DocType: [DocType])
-- ⚙️ Can be Configured (needs Custom Fields/Workflow)
-- 🔨 Needs Custom Development (gap identified)
-
-**Integration Touch-Points:** [Which other requirements this connects to]
-
-**Priority:** Must-Have / Should-Have / Nice-to-Have
-
----
-
-## ERPNext Module Coverage
-
-| Module | Used For | Standard Features Leveraged |
-|--------|----------|----------------------------|
-| [Module] | [Purpose] | [Features] |
-
-## Gaps Summary
-
-- **Standard Features:** [X requirements]
-- **Configuration Needed:** [Y requirements]
-- **Custom Development:** [Z requirements]
-
-## Next Steps
-
-Hand off to Frappe Solution Architect for technical design.
+  <action>Generate Executive Summary:
+    - Purpose: What the client needs and why (1 sentence)
+    - Current State: {{current_system}}
+    - Desired Outcome: Business goals achieved
+    - Key Challenges: Main pain points identified
   </action>
+  <template-output>purpose</template-output>
+  <template-output>desired_outcome</template-output>
+  <template-output>key_challenges</template-output>
 
-  <action>Save to output file: {{default_output_file}}</action>
-  <action>Show user the file location</action>
+  <action>Generate Business Context table:
+    - Industry: {{industry}}
+    - Current System: {{current_system}}
+    - Pain Points: List of main problems from source material
+    - Business Goals: What success looks like
+    - Success Criteria: How to measure success
+  </action>
+  <template-output>pain_points</template-output>
+  <template-output>business_goals</template-output>
+  <template-output>success_criteria</template-output>
+
+  <action>Generate Requirements Analysis:
+    For each requirement category (Sales, Inventory, Production, Accounting, etc.):
+
+    ### [#.# Category Name - e.g., 3.1 Sales Order Processing]
+
+    | Aspect | Detail |
+    |--------|--------|
+    | Requirement | Clear statement of need |
+    | Business Value | Why this matters to business |
+    | ERPNext Status | ✅ Standard / ⚙️ Configure / 🔨 Custom |
+    | ERPNext Module | Module name |
+    | Standard DocType | DocType (if standard) |
+    | Integration | Which other requirements connect |
+    | Priority | Must-Have / Should-Have / Nice-to-Have |
+
+    Use tables, not prose. Number each requirement (3.1, 3.2, 3.3...).
+  </action>
+  <template-output>requirements_analysis</template-output>
+
+  <action>Generate ERPNext Module Coverage table:
+    List modules used and what standard features they provide.
+    Format: | Module | Used For | Standard Features Leveraged |
+  </action>
+  <template-output>module_coverage</template-output>
+
+  <action>Generate Gaps Summary table:
+    Count and categorize requirements by gap type.
+  </action>
+  <template-output>standard_count</template-output>
+  <template-output>standard_details</template-output>
+  <template-output>config_count</template-output>
+  <template-output>config_details</template-output>
+  <template-output>custom_count</template-output>
+  <template-output>custom_details</template-output>
+  <template-output>total_requirements</template-output>
 </step>
 
-<step n="4" goal="Review and validate">
-  <ask>Review the Business Requirements Document above. Any adjustments needed?</ask>
+<step n="4" goal="Quality validation and user approval">
+  <action>Review generated BRD against quality standards:
+    ✓ Non-fluffy, to-the-point, practical
+    ✓ No wordiness or verbose explanations
+    ✓ Tables used over prose throughout
+    ✓ All sections numbered (1, 2, 3, 3.1, 3.2...)
+    ✓ All template variables filled (no placeholders)
+    ✓ Token-efficient structure maintained
+    ✓ Requirements clearly categorized by ERPNext status
+    ✓ Module coverage accurately mapped
+  </action>
+
+  <action>Present summary of generated BRD:
+    - Total requirements analyzed: {{total_requirements}}
+    - Standard features: {{standard_count}}
+    - Configuration needed: {{config_count}}
+    - Custom development: {{custom_count}}
+    - ERPNext modules involved: [list]
+  </action>
+
+  <ask>Review the Business Requirements Document. Any sections need refinement? Any deviations from expected output?</ask>
 
   <check if="user requests changes">
-    <action>Make requested adjustments</action>
-    <action>Save updated version</action>
+    <action>Note requested changes</action>
+    <action>Apply changes with user approval</action>
+    <action>Re-validate quality standards</action>
+    <action>Update template outputs as needed</action>
   </check>
+
+  <action>Confirm document approved and ready for next phase</action>
 </step>
 
 <step n="5" goal="Completion">
-  <action>Confirm BRD is complete and saved</action>
+  <action>Confirm BRD is complete, validated, and saved to: {{default_output_file}}</action>
   <action>Remind user this document is ready for handoff to Frappe Solution Architect</action>
   <action>Suggest next step: Load Frappe SA agent to create Technical Specification</action>
 </step>

@@ -4,22 +4,41 @@
 
 Build Frappe/ERPNext solutions faster with specialized agents handling requirements analysis, solution design, implementation planning, development execution, testing, documentation, and debugging.
 
+## Documentation
+
+- **[Agents README](agents/README.md)** - Agent roster, roles, and invocation
+- **[Workflows README](workflows/README.md)** - Complete workflow catalog by SDLC phase
+- **[Knowledge Base](data/kb/README.md)** - Unified KB (development + functional)
+- **Individual Workflow READMEs** - See each workflow folder for detailed documentation
+
 ---
 
 ## Quick Start
 
 ### Installation
 
+**For Custom Module (Local Development)**:
+
 ```bash
-# Clone the module
+# 1. Clone module to custom modules directory
 cd /path/to/frappe-bench
 git clone https://github.com/rahmed-dev/frappe-experts.git .bmad/custom/modules/frappe-experts
 
-# Install to BMAD
-bmad install frappe-experts
+# 2. Register commands (one-time setup)
+# BMAD will auto-discover and register agents/workflows
+# Restart Claude Code or run: claude refresh-commands
 ```
 
-**Zero configuration needed!** All agents have embedded knowledge bases and work out-of-the-box.
+**Note**: Custom modules don't use `bmad install` - they work immediately after cloning to `.bmad/custom/modules/`.
+
+**Verify Installation**:
+```bash
+# Commands should be available:
+/bmad:frappe-experts:agents:erpnext-ba
+/bmad:frappe-experts:workflows:create-brd
+```
+
+**Zero configuration needed!** Unified knowledge base at `/data/kb/` works out-of-the-box.
 
 ### Load Your First Agent
 

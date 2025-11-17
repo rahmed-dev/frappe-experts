@@ -1,0 +1,15 @@
+# Update Knowledge Base Workflow
+name: update-knowledge-base
+description: "Intelligent knowledge base updater that detects new learnings, better patterns, and improved practices from development sessions"
+author: "frappe-experts"
+
+config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+module_data_path: "{config_source}:module_data_path"
+
+installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/update-knowledge-base"
+template: false  # Action workflow
+instructions: "{installed_path}/instructions.md"
+
+standalone: true

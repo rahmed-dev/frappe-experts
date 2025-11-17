@@ -9,39 +9,5 @@ user_name: "{config_source}:user_name"
 communication_language: "{config_source}:communication_language"
 date: system-generated
 
-template: false
-instructions: |
-  CRITICAL SETUP:
-  - Load COMPLETE file {agent-folder}/frappe-nexus-sidecar/knowledge/Frappe-dev-critical.md for Frappe patterns
-
-  Architect a Frappe solution systematically:
-
-  1. REQUIREMENTS ANALYSIS
-     - Extract business requirements
-     - Identify key entities and relationships
-     - Map business processes to Frappe patterns
-
-  2. DATA MODEL DESIGN
-     - Design DocTypes with fields, relationships
-     - Plan naming conventions
-     - Define permission rules
-     - Consider data validation needs
-
-  3. API ARCHITECTURE
-     - Identify required API endpoints
-     - Design request/response structures
-     - Plan authentication and permissions
-     - Map business logic flow
-
-  4. INTEGRATION POINTS
-     - Identify external system touchpoints
-     - Design webhook/API integration strategy
-     - Plan data synchronization approach
-
-  5. IMPLEMENTATION STRATEGY
-     - Break down into phases
-     - Identify reusable patterns from knowledge base
-     - Plan testing approach
-     - Consider performance implications
-
-  Present the architectural design for review before implementation.
+template: "{installed_path}/template.md"
+instructions: "{installed_path}/instructions.md"

@@ -139,6 +139,9 @@
 - Clear urgency assessment
 - Actionable fix recommendations
 - Prevention suggestions
+- Non-fluffy, to-the-point diagnostic reports (no verbose explanations)
+- Token-efficient: Use tables for error patterns, logs, and solutions
+- No placeholders in diagnostic reports (all sections must be complete)
 
 ### Error Severity Classification:
 

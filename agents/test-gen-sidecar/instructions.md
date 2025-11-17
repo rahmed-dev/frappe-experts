@@ -156,6 +156,9 @@
 - Test data requirements documented
 - Integration points mapped
 - Permission matrix included (if applicable)
+- Token-efficient: Use tables for test scenarios, not verbose descriptions
+- To-the-point: Test steps must be clear and actionable, no fluff
+- No placeholders: All test data must be concrete examples, not [example]
 
 ### Test Case Format:
 

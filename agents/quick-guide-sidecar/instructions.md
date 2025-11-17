@@ -89,6 +89,9 @@
 - Scannable (bullets, numbers, bold, tables)
 - Complete for 80% use cases
 - Tested with actual UI (steps match reality)
+- Anti-fluff: No marketing language or unnecessary explanations
+- Practical and reliable: Every step must be accurate and tested
+- No placeholders: All examples must be concrete, not [placeholder]
 
 ### Language Guidelines:
 

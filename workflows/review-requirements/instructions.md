@@ -2,6 +2,9 @@
 
 <critical>Analyze existing requirements and categorize against ERPNext capabilities</critical>
 
+<critical>Follow template standards from: {project-root}/.bmad/custom/modules/frappe-experts/standards/template-standards.md</critical>
+<critical>Output MUST be token-efficient: tables over prose, numbered sections, no fluff</critical>
+
 <workflow>
 
 <step n="1" goal="Load existing requirements">

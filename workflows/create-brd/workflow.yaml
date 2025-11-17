@@ -11,7 +11,7 @@ module_data_path: "{config_source}:module_data_path"
 
 # Workflow paths
 installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/create-brd"
-template: true
+template: "{installed_path}/template.md"
 instructions: "{installed_path}/instructions.md"
 
 # Output configuration
