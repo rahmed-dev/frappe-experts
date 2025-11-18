@@ -1,5 +1,7 @@
 ---
 last-updated: 2025-11-18
+changelog: |
+  - 2025-11-18: Added DataTable column header alignment pattern (CSS injection via JS)
 ---
 
 # Development Knowledge Base
@@ -118,12 +120,14 @@ Technical knowledge for Frappe/ERPNext development - patterns, best practices, c
 | File | Description |
 |------|-------------|
 | **coding-guidelines.md** | Report development standards |
-| **best-practices.md** | Query & script report patterns |
+| **best-practices.md** | Query & script report patterns, **DataTable column alignment** (NEW 2025-11-18) |
 
 **Report Types**:
 - **Script Reports** - Python/SQL with complex logic
 - **Query Reports** - Simple SQL queries
 - **Print Formats** - Document printing
+
+**Key Pattern (NEW)**: DataTable column header alignment requires CSS injection via JS, not column `align` property
 
 ## Quick Reference
 

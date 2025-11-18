@@ -76,6 +76,44 @@ def get_columns():
     ]
 ```
 
+## Column Header & Cell Alignment
+
+**Important**: Frappe DataTable does NOT support `align` property in column definitions for headers. The `align` property only affects cell content, not column headers.
+
+**Solution**: Inject CSS via JavaScript in `onload()`:
+
+```javascript
+onload: function(report) {
+    // Inject CSS for column alignment
+    const styleId = "report-alignment-styles";
+    if (!document.getElementById(styleId)) {
+        const style = document.createElement("style");
+        style.id = styleId;
+        style.innerHTML = `
+            /* Left-align all column headers and cells */
+            .dt-header .dt-cell__content,
+            .dt-row .dt-cell__content {
+                text-align: left !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
+```
+
+**Why not external CSS?**
+- External CSS selectors like `[data-path="query-report/Report Name"]` are unreliable
+- JS injection ensures styles load when the report loads
+- Scoped to report page only (style element removed when leaving page)
+
+**Targeting specific columns** (if needed):
+```css
+/* Target by column index (0-based) */
+.dt-cell--col-2 .dt-cell__content {
+    text-align: right !important;
+}
+```
+
 ## JavaScript Usage (UI Only - Minimal)
 
 **Do NOT include:**
