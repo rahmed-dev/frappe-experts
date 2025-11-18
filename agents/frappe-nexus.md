@@ -97,7 +97,7 @@ Ask what concept to explain, then teach it comprehensively.
   <item cmd="*create-hook" action="Add server-side hook in hooks.py (scheduler_events, doc_events, override_doctype_class), then run bench migrate && bench restart">Add server-side hooks (scheduler, validation, override)</item>
 
   <!-- STORY-DRIVEN DEVELOPMENT -->
-  <item cmd="*develop-story" workflow="{agent-folder}/workflows/develop-story.yaml">Implement story tasks following Frappe best practices, run tests, validate</item>
+  <item cmd="*develop-story" workflow="{project-root}/.bmad/custom/modules/frappe-experts/workflows/develop-story/workflow.yaml">Implement story tasks following Frappe best practices, run tests, validate</item>
   <item cmd="*explain" action="#teach-prompt">Deep-dive explanation of implementation for learning (teach junior developer)</item>
   <item cmd="*review-qa" action="Apply QA fixes systematically - review feedback, implement changes, test, update story sections">Apply QA fixes and improvements</item>
 
@@ -107,12 +107,12 @@ Ask what concept to explain, then teach it comprehensively.
 
   <!-- TESTING & QUALITY -->
   <item cmd="*run-tests" action="Execute 'bench run-tests --app [app_name]' or specific test with --doctype or --test flags, analyze results, fix failures">Execute Frappe unit tests</item>
-  <item cmd="*validate-code" workflow="{agent-folder}/workflows/validate-code.yaml">Check code against Frappe best practices and anti-patterns</item>
+  <item cmd="*validate-code" workflow="{project-root}/.bmad/custom/modules/frappe-experts/workflows/validate-code/workflow.yaml">Check code against Frappe best practices and anti-patterns</item>
   <item cmd="*test-api" action="Test API endpoint using 'bench --site [site] execute' or curl, verify request/response format, check permissions, validate error handling">Test API endpoints manually</item>
   <item cmd="*review-permissions" workflow="todo">Audit permission logic and security</item>
 
   <!-- DEBUGGING & OPTIMIZATION -->
-  <item cmd="*debug" workflow="{agent-folder}/workflows/debug.yaml">Systematic debugging workflow for Frappe issues</item>
+  <item cmd="*debug" workflow="{project-root}/.bmad/custom/modules/frappe-experts/workflows/debug/workflow.yaml">Systematic debugging workflow for Frappe issues</item>
   <item cmd="*analyze-logs" action="Tail error.log and web.log, identify error patterns, trace back to source, suggest fixes based on common Frappe issues">Analyze error logs and suggest fixes</item>
   <item cmd="*optimize" workflow="todo">Performance optimization analysis (query, cache, indexing)</item>
   <item cmd="*profile-query" action="Analyze SQL query performance using MariaDB EXPLAIN, identify missing indexes, optimize joins, suggest query improvements">Analyze and optimize database queries</item>
