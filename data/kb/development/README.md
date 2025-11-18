@@ -1,5 +1,5 @@
 ---
-last-updated: 2025-11-17
+last-updated: 2025-11-18
 ---
 
 # Development Knowledge Base
@@ -56,10 +56,12 @@ Technical knowledge for Frappe/ERPNext development - patterns, best practices, c
 |------|-------------|------------|
 | **frappe-dev-critical.md** | Critical patterns & anti-patterns | Tech stack, architecture, critical patterns, common mistakes to avoid, code templates |
 | **4-tier-framework.md** | Configure-first solution design | Tier 1: Standard → Tier 2: Config → Tier 3: Scripts → Tier 4: Custom App, ROI decision matrix |
+| **script-report-filters-and-multiselect.md** | Script report filters & MultiSelectList | Filter definition in JS, MultiSelectList pattern, ERPNext standard, batch operations, assignment handling (NEW 2025-11-18) |
 
 **When to Read**:
 - **frappe-dev-critical.md** - Before ANY development work (foundations)
 - **4-tier-framework.md** - Before architectural decisions (solution design)
+- **script-report-filters-and-multiselect.md** - Before developing script reports with filters (especially multi-select)
 
 ## Server-Side Development
 
@@ -191,6 +193,11 @@ frappe.call({
 **For Solution Design**:
 1. `frappe-framework/4-tier-framework.md` - Design philosophy
 2. Review relevant category (server/client/pages/reports)
+
+**For Report Development**:
+1. `reports/coding-guidelines.md` - Report structure basics
+2. `reports/best-practices.md` - Query & script patterns
+3. `frappe-framework/script-report-filters-and-multiselect.md` - **CRITICAL** for multi-select filters
 
 **For Code Review**:
 1. ⭐ Check against `standards/coding-principles.md` (universal standards)

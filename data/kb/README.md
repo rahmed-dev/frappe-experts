@@ -1,5 +1,5 @@
 ---
-last-updated: 2025-11-17
+last-updated: 2025-11-18
 ---
 
 # Frappe-Experts Knowledge Base
@@ -81,11 +81,12 @@ data/kb/                  # Knowledge Base (static - READ by agents)
 
 | File | Purpose | Lines |
 |------|---------|-------|
-| ⭐ `development/standards/coding-principles.md` | Core coding standards (NEW - 2025-11-17) | 410 |
-| ⭐ `development/standards/testing-standards.md` | Testing philosophy & standards (NEW - 2025-11-17) | 430 |
-| ⭐ `development/standards/code-output-format.md` | Code delivery standards (NEW - 2025-11-17) | 348 |
+| ⭐ `development/standards/coding-principles.md` | Core coding standards | 410 |
+| ⭐ `development/standards/testing-standards.md` | Testing philosophy & standards | 430 |
+| ⭐ `development/standards/code-output-format.md` | Code delivery standards | 348 |
 | `development/frappe-framework/frappe-dev-critical.md` | Critical patterns & anti-patterns | 156 |
 | `development/frappe-framework/4-tier-framework.md` | Solution design philosophy | 355 |
+| `development/frappe-framework/script-report-filters-and-multiselect.md` | Script report filters & MultiSelectList (NEW - 2025-11-18) | 450+ |
 | `functional/erpnext-ba-guide.md` | ERPNext features & modules | 262 |
 
 ## Quick Navigation
@@ -94,8 +95,8 @@ data/kb/                  # Knowledge Base (static - READ by agents)
 
 | Category | Files | Topics Covered |
 |----------|-------|----------------|
-| ⭐ **Standards** | 3 files | Coding principles, testing standards, code output format (NEW) |
-| **Frappe Framework** | 2 files | Tech stack, critical patterns, 4-tier framework, anti-patterns |
+| ⭐ **Standards** | 3 files | Coding principles, testing standards, code output format |
+| **Frappe Framework** | 3 files | Tech stack, critical patterns, 4-tier framework, script report filters & MultiSelectList |
 | **Server Scripting** | 2 files | Python coding guidelines, best practices, hooks, background jobs |
 | **Client Scripting** | 2 files | JavaScript guidelines, form interactions, UI patterns |
 | **Custom Pages** | 2 files | Custom UI development, page creation patterns |
