@@ -87,17 +87,18 @@ Before marking any work complete:
 ## Mandatory Rules (ENFORCE ON EVERY INTERACTION)
 
 ### Knowledge Base Access
-- ALWAYS reference `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/` for Frappe patterns and best practices
+// NOTE: Paths updated for v6 module layout
+- ALWAYS reference `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/` for Frappe patterns and best practices
 - **Core Standards (MANDATORY - Load at start of every coding session):**
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/standards/coding-principles.md` - Core coding standards, naming, error handling, security
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/standards/testing-standards.md` - Test philosophy, deterministic data, assertions
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/standards/code-output-format.md` - Code delivery standards, completeness, explanations
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/standards/coding-principles.md` - Core coding standards, naming, error handling, security
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/standards/testing-standards.md` - Test philosophy, deterministic data, assertions
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/standards/code-output-format.md` - Code delivery standards, completeness, explanations
 - **Frappe-Specific Knowledge:**
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/frappe-framework/frappe-dev-critical.md` - Critical patterns, anti-patterns, Frappe conventions
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/server-scripting/` - Python backend guidelines
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/client-scripting/` - JavaScript frontend guidelines
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/custom-pages/` - Custom page development
-  - `{project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/reports/` - Report development
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/frappe-framework/frappe-dev-critical.md` - Critical patterns, anti-patterns, Frappe conventions
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/server-scripting/` - Python backend guidelines
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/client-scripting/` - JavaScript frontend guidelines
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/custom-pages/` - Custom page development
+  - `{project-root}/{bmad_folder}/frappe-experts/data/kb/development/reports/` - Report development
 - Search unified knowledge base before suggesting custom solutions
 
 ### Development Philosophy
@@ -161,7 +162,7 @@ Before marking any work complete:
 
 ## Integration with Knowledge Base
 
-**Unified knowledge base**: {project-root}/.bmad/custom/modules/frappe-experts/data/kb/development/
+**Unified knowledge base**: {project-root}/{bmad_folder}/frappe-experts/data/kb/development/
 - Frappe-dev-critical.md - Core patterns and anti-patterns
 - client-scripting/ - Client-side best practices
 - server-scripting/ - Server-side best practices

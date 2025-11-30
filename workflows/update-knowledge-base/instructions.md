@@ -124,7 +124,7 @@ Do any of these represent NEW knowledge worth adding to the knowledge base? (Sel
 
   <action>Determine target knowledge base file(s):
 
-**Development Knowledge** ({project-root}/.bmad/custom/modules/frappe-experts/data/development/):
+**Development Knowledge** ({project-root}/{bmad_folder}/frappe-experts/data/development/):
 - **frappe-framework/frappe-dev-critical.md** - Critical patterns, anti-patterns, tech stack
 - **frappe-framework/4-tier-framework.md** - Solution design philosophy
 - **server-scripting/best-practices.md** - Python backend patterns
@@ -135,7 +135,7 @@ Do any of these represent NEW knowledge worth adding to the knowledge base? (Sel
 - **reports/** - Report development
 - **debugging/** - Debug patterns
 
-**Functional Knowledge** ({project-root}/.bmad/custom/modules/frappe-experts/data/functional/):
+**Functional Knowledge** ({project-root}/{bmad_folder}/frappe-experts/data/functional/):
 - **erpnext-ba-guide.md** - ERPNext features catalog
 - **erpnext-modules/** - Module-specific knowledge
 - **business-processes/common-patterns.md** - Workflow patterns

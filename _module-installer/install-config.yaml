@@ -36,7 +36,7 @@ prompt:
 
 # STATIC: Module data path (where generated documents are saved)
 module_data_path:
-  result: "{project-root}/.bmad/frappe-experts/data"
+  result: "{project-root}/{bmad_folder}/frappe-experts/data"
 
 # STATIC: Enable workflows
 workflows_enabled:

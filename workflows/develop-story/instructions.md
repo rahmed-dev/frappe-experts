@@ -1,7 +1,7 @@
 # Develop Story Workflow Instructions
 
 <critical>Load COMPLETE file {agent-folder}/frappe-nexus-sidecar/knowledge/Frappe-dev-critical.md for core Frappe patterns and anti-patterns</critical>
-<critical>Follow template standards from: {project-root}/.bmad/custom/modules/frappe-experts/standards/template-standards.md</critical>
+<critical>Follow template standards from: {project-root}/{bmad_folder}/frappe-experts/standards/template-standards.md</critical>
 <critical>Output MUST be token-efficient: tables over prose, numbered sections, no fluff</critical>
 <critical>Communicate in {communication_language} throughout</critical>
 
