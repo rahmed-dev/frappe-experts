@@ -3,11 +3,12 @@ description: Architect Frappe solution systematically - requirements analysis, d
 author: Nexus
 
 # Standard BMAD v6 config block
-config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+config_source: "{project-root}/{bmad_folder}/frappe-experts/config.yaml"
 output_folder: "{config_source}:output_folder"
 user_name: "{config_source}:user_name"
 communication_language: "{config_source}:communication_language"
 date: system-generated
 
+installed_path: "{project-root}/{bmad_folder}/frappe-experts/workflows/design-system"
 template: "{installed_path}/template.md"
 instructions: "{installed_path}/instructions.md"

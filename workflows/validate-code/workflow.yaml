@@ -3,7 +3,7 @@ description: Validate code against Frappe best practices and anti-patterns
 author: Nexus
 
 # Standard BMAD v6 config block
-config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+config_source: "{project-root}/{bmad_folder}/frappe-experts/config.yaml"
 output_folder: "{config_source}:output_folder"
 user_name: "{config_source}:user_name"
 communication_language: "{config_source}:communication_language"

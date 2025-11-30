@@ -1,7 +1,7 @@
 # Create TSD Workflow Instructions
 
 <critical>Create Technical Specification Document with UX focus from Business Requirements</critical>
-<critical>Follow template standards from: {project-root}/.bmad/custom/modules/frappe-experts/standards/template-standards.md</critical>
+<critical>Follow template standards from: {project-root}/{bmad_folder}/frappe-experts/standards/template-standards.md</critical>
 <critical>Output MUST be token-efficient: tables over prose, numbered sections, no fluff</critical>
 
 <workflow>

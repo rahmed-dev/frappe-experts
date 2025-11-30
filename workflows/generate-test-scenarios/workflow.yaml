@@ -3,12 +3,12 @@ name: generate-test-scenarios
 description: "Generate comprehensive QA test scenarios covering happy path, edge cases, integrations, and permissions"
 author: "frappe-experts"
 
-config_source: "{project-root}/.bmad/custom/modules/frappe-experts/config.yaml"
+config_source: "{project-root}/{bmad_folder}/frappe-experts/config.yaml"
 user_name: "{config_source}:user_name"
 communication_language: "{config_source}:communication_language"
 module_data_path: "{config_source}:module_data_path"
 
-installed_path: "{project-root}/.bmad/custom/modules/frappe-experts/workflows/generate-test-scenarios"
+installed_path: "{project-root}/{bmad_folder}/frappe-experts/workflows/generate-test-scenarios"
 template: "{installed_path}/template.md"
 instructions: "{installed_path}/instructions.md"
 

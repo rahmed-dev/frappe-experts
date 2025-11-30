@@ -1,6 +1,6 @@
 # Nexus Memory Bank
 
-_User: Rizwan | Knowledge Base: Unified KB at {project-root}/.bmad/custom/modules/frappe-experts/data/kb/ | Memories populate as we work together_
+_User: Rizwan | Knowledge Base: Unified KB at {project-root}/{bmad_folder}/frappe-experts/data/kb/ | Memories populate as we work together_
 
 ## Rizwan's Coding Preferences Beyond Standards
 

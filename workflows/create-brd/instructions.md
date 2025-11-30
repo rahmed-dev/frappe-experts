@@ -2,7 +2,7 @@
 
 <critical>Execute this workflow to convert messy meeting notes into structured Business Requirements Document</critical>
 <critical>Communicate in {communication_language} throughout</critical>
-<critical>Follow template standards from: {project-root}/.bmad/custom/modules/frappe-experts/standards/template-standards.md</critical>
+<critical>Follow template standards from: {project-root}/{bmad_folder}/frappe-experts/standards/template-standards.md</critical>
 <critical>Output MUST be token-efficient: tables over prose, numbered sections, no fluff</critical>
 
 <workflow>

@@ -6,8 +6,8 @@ module_name: frappe-experts
 module_version: '1.0.0'
 module_description: 'Expert agents for Frappe Framework and ERPNext development'
 
-# Module-specific paths
-module_data_path: '{project-root}/.bmad/custom/modules/frappe-experts/data'
+# Module-specific paths (resolved from installer config)
+module_data_path: '{config}:module_data_path'
 
 # User settings (inherited from BMAD core during installation)
 user_name: '{config}:user_name'
